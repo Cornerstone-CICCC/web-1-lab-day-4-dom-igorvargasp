@@ -3,7 +3,7 @@
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: monospace;
 }
 
 .container {
@@ -13,6 +13,9 @@ body {
   max-width: 1280px;
   width: 100%;
   margin: auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
 }
 @media (min-width: 1024px) {
   .container {
@@ -29,27 +32,69 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 4px;
 }
 .container form fieldset legend {
-  font-weight: 700;
+  font-weight: 600;
+  padding: 0 0.5rem;
 }
 .container form fieldset label {
   display: flex;
   align-items: center;
   gap: 1rem;
 }
+.container form fieldset label span {
+  min-width: 120px;
+}
 .container form fieldset label input {
   flex: 1;
-  padding: 0.25rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: monospace;
 }
 .container form fieldset.form__btns {
   display: flex;
   flex-direction: row;
   gap: 0.5rem;
+  padding: 10px;
 }
 .container form fieldset.form__btns button {
   flex: 1;
-  padding: 0.25rem;
+  font-family: monospace;
+  font-size: 14px;
+  cursor: pointer;
+  font-weight: 600;
+}
+.container #employees {
+  flex: 1.5;
+  overflow-x: auto;
+}
+.container #employees table {
+  width: 100%;
+  border-collapse: collapse;
+  background: white;
+}
+.container #employees table thead {
+  background: #f5f5f5;
+}
+.container #employees table thead th {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 2px solid #ddd;
+  font-weight: 600;
+}
+.container #employees table tbody td {
+  padding: 1rem;
+  border-bottom: 1px solid #eee;
+  background: #ebeaea;
+}
+.container #employees table tbody .employee-photo {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
 }
 
 /*# sourceMappingURL=styles.css.map */
